@@ -60,6 +60,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -101,7 +103,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#model-definition" id="toc-model-definition" class="nav-link active" data-scroll-target="#model-definition">Model Definition</a></li>
+  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer">Answer</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -123,42 +132,21 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>What is the expected immigration attitude of someone who is liberal and starts with an attitude of 6?</p>
+<section id="model-definition" class="level2">
+<h2 class="anchored" data-anchor-id="model-definition">Model Definition</h2>
+<p><span class="math display">\[y_i = \beta_0  + \beta_1 x_{1,i} + \beta_2 x_{2,i}\]</span> with <span class="math inline">\(y = att\_end\)</span>, <span class="math inline">\(x_1 = att\_start\)</span>, and <span class="math inline">\(x_2 = liberal\)</span>.</p>
+</section>
+<section id="answer" class="level2">
+<h2 class="anchored" data-anchor-id="answer">Answer</h2>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 115 × 14
-   treatment att_start att_end gender race  liberal party       age income line 
-   &lt;fct&gt;         &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;lgl&gt;   &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;
- 1 Treated          11      11 Female White FALSE   Democrat     31 135000 Fram…
- 2 Treated           9      10 Female White FALSE   Republic…    34 105000 Fram…
- 3 Treated           3       5 Male   White TRUE    Democrat     63 135000 Fram…
- 4 Treated          11      11 Male   White FALSE   Democrat     45 300000 Fram…
- 5 Control           8       5 Male   White TRUE    Democrat     55 135000 Fram…
- 6 Treated          13      13 Female White FALSE   Democrat     37  87500 Fram…
- 7 Control          13      13 Female White FALSE   Republic…    53  87500 Fram…
- 8 Treated          10      11 Male   White FALSE   Democrat     36 135000 Fram…
- 9 Control          12      12 Female White FALSE   Democrat     54 105000 Fram…
-10 Treated           9      10 Male   White FALSE   Republic…    42 135000 Fram…
-# ℹ 105 more rows
-# ℹ 4 more variables: station &lt;chr&gt;, hisp_perc &lt;dbl&gt;, ideology_start &lt;int&gt;,
-#   ideology_end &lt;int&gt;</code></pre>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -2,15 +2,57 @@
 title: "Immigration"
 execute: 
   echo: false
+  warning: false
 ---
 
 ```{r}
 library(tidyverse)
 library(primer.data)
+library(rstanarm)
 ```
 
+What is the expected immigration attitude of someone who is liberal and starts with an attitude of 6?
 
 ```{r}
-trains
+x <- trains |> 
+  select(att_end, liberal, att_start)
+```
+
+```{r}
+fit_obj <- stan_glm(data = x,
+         formula = att_end ~ liberal + att_start,
+         family = gaussian,
+         refresh = 0,
+         seed = 9)
+```
+
+## Model Definition
+
+$$y_i = \beta_0  + \beta_1 x_{1,i} + \beta_2 x_{2,i}$$ 
+with $y = att\_end$, $x_1 = att\_start$, and $x_2 = liberal$.
+
+```{r}
+new_obs <- tibble(att_start = 6, liberal = TRUE)
+```
+
+```{r}
+pp <- posterior_epred(object = fit_obj, newdata = new_obs) |> 
+  as_tibble()
+```
+
+## Answer
+
+```{r}
+pp |> 
+  ggplot(aes(x = `1`)) +
+    geom_histogram(aes(y = after_stat(count/sum(count))),
+                   bins = 100)  +
+    labs(title = "Posterior for Immigration Attitude of a Liberal when Start Attitude is 6",
+         subtitle = "Attitudes remain liberal",
+         x = "Immigration Attitude at End",
+         y = "Probability") +
+    scale_x_continuous(labels = scales::number_format()) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    theme_classic()
 ```
 

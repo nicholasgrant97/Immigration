@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-About this site
+My name is [Nicholas Grant](https://github.com/nicholasgrant97). You can reach me at `nicholas.grant97@gmail.com`
 
-```{r}
-1 + 1
-```
+This project was created in conjunction with [Kane’s Free Data Science Bootcamp](https://bootcamp.davidkane.info/).

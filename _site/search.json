@@ -4,13 +4,27 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "My name is Nicholas Grant. You can reach me at nicholas.grant97@gmail.com\nThis project was created in conjunction with Kane’s Free Data Science Bootcamp."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Immigration",
     "section": "",
-    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n# A tibble: 115 × 14\n   treatment att_start att_end gender race  liberal party       age income line \n   &lt;fct&gt;         &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;lgl&gt;   &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;\n 1 Treated          11      11 Female White FALSE   Democrat     31 135000 Fram…\n 2 Treated           9      10 Female White FALSE   Republic…    34 105000 Fram…\n 3 Treated           3       5 Male   White TRUE    Democrat     63 135000 Fram…\n 4 Treated          11      11 Male   White FALSE   Democrat     45 300000 Fram…\n 5 Control           8       5 Male   White TRUE    Democrat     55 135000 Fram…\n 6 Treated          13      13 Female White FALSE   Democrat     37  87500 Fram…\n 7 Control          13      13 Female White FALSE   Republic…    53  87500 Fram…\n 8 Treated          10      11 Male   White FALSE   Democrat     36 135000 Fram…\n 9 Control          12      12 Female White FALSE   Democrat     54 105000 Fram…\n10 Treated           9      10 Male   White FALSE   Republic…    42 135000 Fram…\n# ℹ 105 more rows\n# ℹ 4 more variables: station &lt;chr&gt;, hisp_perc &lt;dbl&gt;, ideology_start &lt;int&gt;,\n#   ideology_end &lt;int&gt;"
+    "text": "What is the expected immigration attitude of someone who is liberal and starts with an attitude of 6?"
+  },
+  {
+    "objectID": "index.html#model-definition",
+    "href": "index.html#model-definition",
+    "title": "Immigration",
+    "section": "Model Definition",
+    "text": "Model Definition\n\\[y_i = \\beta_0  + \\beta_1 x_{1,i} + \\beta_2 x_{2,i}\\] with \\(y = att\\_end\\), \\(x_1 = att\\_start\\), and \\(x_2 = liberal\\)."
+  },
+  {
+    "objectID": "index.html#answer",
+    "href": "index.html#answer",
+    "title": "Immigration",
+    "section": "Answer",
+    "text": "Answer"
   }
 ]
